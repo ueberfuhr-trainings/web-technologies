@@ -1,5 +1,7 @@
 # Webtechnologien
 
+Dieses Repository enthält Links zum Kursthema sowie einen [HTTP-Server](http-server) mit Beispieldaten zum Testen.
+
 ## Allgemeine Informationen
 
 - Geschichte des Internets:

@@ -1,0 +1,13 @@
+{
+  "name": "http-server",
+  "version": "1.0.0",
+  "description": "Simple HTTP server with sample data.",
+  "scripts": {
+    "server": "npx json-server db.json"
+  },
+  "author": "Ralf Ueberfuhr",
+  "license": "ISC",
+  "dependencies": {
+    "json-server": "^1.0.0-beta.3"
+  }
+}
