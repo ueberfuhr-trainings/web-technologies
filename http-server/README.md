@@ -7,6 +7,6 @@ To run the server and fetch the data, just use this command:
 
 ```bash
 npm run server
-# open http://localhost:3000 in the browser or fetch data using curl_
+# open http://localhost:3000 in the browser or fetch data using curl:
 curl -i http://localhost:3000/receipts
 ```
