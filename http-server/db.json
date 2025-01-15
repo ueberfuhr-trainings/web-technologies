@@ -2,11 +2,102 @@
   "receipts": [
     {
       "id": "1",
-      "title": "Spaghetti Bolognese"
+      "title": "Spaghetti Bolognese",
+      "ingredients": [
+        {
+          "ingredient": "1",
+          "amount": 500
+        },
+        {
+          "ingredient": "2",
+          "amount": 3
+        },
+        {
+          "ingredient": "3",
+          "amount": 100
+        },
+        {
+          "ingredient": "4",
+          "amount": 3
+        },
+        {
+          "ingredient": "5",
+          "amount": 4
+        },
+        {
+          "ingredient": "7",
+          "amount": 20
+        }
+      ]
     },
     {
       "id": "2",
-      "title": "Caesar Salad"
+      "title": "Cesar Salad",
+      "ingredients": [
+        {
+          "ingredient": "6",
+          "amount": 400
+        },
+        {
+          "ingredient": "7",
+          "amount": 20
+        },
+        {
+          "ingredient": "8",
+          "amount": 50
+        },
+        {
+          "ingredient": "9",
+          "amount": 200
+        }
+      ]
+    }
+  ],
+  "ingredients": [
+    {
+      "id": "1",
+      "name": "Hackfleisch",
+      "unit": "Gramm"
+    },
+    {
+      "id": "2",
+      "name": "Tomaten",
+      "unit": "Stück"
+    },
+    {
+      "id": "3",
+      "name": "Sellerie",
+      "unit": "Gramm"
+    },
+    {
+      "id": "4",
+      "name": "Knoblauch",
+      "unit": "Zehen"
+    },
+    {
+      "id": "5",
+      "name": "Möhren",
+      "unit": "Stück"
+    },
+    {
+      "id": "6",
+      "name": "Salat",
+      "unit": "Gramm"
+    },
+    {
+      "id": "7",
+      "name": "Öl",
+      "unit": "ml"
+    },
+    {
+      "id": "8",
+      "name": "Parmesan",
+      "unit": "Gramm"
+    },
+    {
+      "id": "9",
+      "name": "Hähnchen",
+      "unit": "Gramm"
     }
   ]
 }
