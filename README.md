@@ -20,6 +20,10 @@ Dieses Repository enthält Links zum Kursthema sowie einen [HTTP-Server](http-se
   - zustandslos
   - Request/Response
   - Resource URLs
+- Versionen:
+  - HTTP 1.1: https://datatracker.ietf.org/doc/html/rfc2616
+  - HTTP/2: https://datatracker.ietf.org/doc/html/rfc9113
+  - HTTP/3: https://datatracker.ietf.org/doc/html/rfc9114
 - Nachrichten
   - Request-Methoden
   - Response Codes
