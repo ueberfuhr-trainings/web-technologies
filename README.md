@@ -30,6 +30,7 @@ Dieses Repository enthält Links zum Kursthema sowie einen [HTTP-Server](http-se
 ### HTML
 - Semantisches Markup
 - HEAD-Bereich
+- Wie funktioniert der Browser? - DOM
 - Überschriften
 - Block- vs. Inline-Elemente
 - Tabellen, Listen, Divs
