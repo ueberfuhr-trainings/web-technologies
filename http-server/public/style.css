@@ -1,23 +1,28 @@
 h1 {
-    color: darkred;
+  color: darkred;
 }
+
 body {
-    background-color: beige;
+  background-color: beige;
 }
+
 /* ID-Selector */
 #nameInput {
-    background-color: aquamarine;
+  background-color: aquamarine;
 }
+
 /* empfohlen: CSS-Klasse */
 .form-row {
-    border: 1pt solid grey;
-    width: 100%;
-    margin: 3px;
-    padding: 2px;
+  border: 1pt solid grey;
+  width: 100%;
+  margin: 3px;
+  padding: 2px;
 }
+
 label {
-    font-weight: bold;
+  font-weight: bold;
 }
+
 label::after {
-    content: ':';
+  content: ':';
 }
