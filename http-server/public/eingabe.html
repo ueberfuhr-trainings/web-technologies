@@ -9,28 +9,16 @@
 
 <h1>Rezept erstellen</h1>
 
-<form>
+<form action="gelbekatze">
+  <button type="button" id="myButton">Click me!</button>
   <div class="form-row">
     <label for="nameInput">Name</label>
     <input id="nameInput" name="name" type="text" required minlength="3">
   </div>
-  <div class="form-row">
-    <label for="zutat1">Zutat 1</label>
-    <select class="zutaten-auswahl" name="zutat1">
-    </select>
-    <input name="menge1" id="zutat1" type="number" min="1">
+  <div id="zutatenInputs">
   </div>
-  <div class="form-row">
-    <label for="zutat2">Zutat 2</label>
-    <select class="zutaten-auswahl">
-    </select>
-    <input id="zutat2" type="number" min="1">
-  </div>
-  <div class="form-row">
-    <label for="zutat3">Zutat 3</label>
-    <select class="zutaten-auswahl">
-    </select>
-    <input id="zutat3" type="number" min="1">
+  <div>
+    <a id="add-zutaten-link">Zutat hinzufügen</a>
   </div>
   <div class="form-row">
     <label for="zubereitung1">Schritt 1</label>
@@ -66,13 +54,52 @@
       unit: 'g.'
     }
   ];
+
+  function displayZutaten() {
+    document
+      .querySelectorAll('.zutaten-auswahl')
+      .forEach(combobox => {
+        combobox.innerHTML = zutaten
+          .map(zutat => `<option>${zutat.name} (${zutat.unit})</option>`)
+          .join()
+      });
+  }
+
+  displayZutaten();
+
   document
-    .querySelectorAll('.zutaten-auswahl')
-    .forEach(combobox => {
-      combobox.innerHTML = zutaten
-        .map(zutat => `<option>${zutat.name} (${zutat.unit})</option>`)
-        .join()
+    .querySelector('#myButton')
+    .addEventListener('click', () => {
+      zutaten.push({
+        name: 'XYZ',
+        unit: 'KG.'
+      });
+      displayZutaten();
     });
+
+  let zutatenCounter = 1;
+
+  function addZutatenInput() {
+    document
+      .querySelector('#zutatenInputs')
+      .insertAdjacentHTML('beforeend', `
+        <div class="form-row">
+            <label for="zutat${zutatenCounter}">Zutat #${zutatenCounter}</label>
+            <select class="zutaten-auswahl" name="zutat${zutatenCounter}">
+            </select>
+            <input name="menge1" id="zutat${zutatenCounter}" type="number" min="1">
+        </div>
+      `);
+    zutatenCounter++;
+    displayZutaten(); // TODO: nur die neue SELECT befüllen, nicht ALLE
+  }
+
+  document
+    .querySelector('#add-zutaten-link')
+    .addEventListener('click', () => {
+      addZutatenInput();
+    });
+  addZutatenInput();
 </script>
 <script src="script.js"></script>
 
