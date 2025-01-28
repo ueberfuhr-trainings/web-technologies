@@ -18,8 +18,13 @@ Dieses Repository enthält Links zum Kursthema sowie einen [HTTP-Server](http-se
 - Eigenschaften:
   - text-basiert
   - zustandslos
+  - synchron
+  - technologie-neutral
   - Request/Response
   - Resource URLs
+  - Sessions
+  - HTTPS: SSL (asymmetrische Verschlüsselung)
+  - Architekturen: Classic Web, AJAX, SOAP, REST
 - Versionen:
   - HTTP 1.1: https://datatracker.ietf.org/doc/html/rfc2616
   - HTTP/2: https://datatracker.ietf.org/doc/html/rfc9113
@@ -29,7 +34,9 @@ Dieses Repository enthält Links zum Kursthema sowie einen [HTTP-Server](http-se
   - Response Codes
 - Weitere Funktionen
   - Content/Language/Encoding Negotiation
+  - Protocol Switches / Websockets
   - CORS
+  - OpenAPI zur Beschreibung von HTTP-APIs
 
 ### HTML
 - Semantisches Markup
