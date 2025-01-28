@@ -39,12 +39,36 @@ a:focus {
 .rezepte-container {
   display: flex;
   flex-wrap: wrap;
+  gap: 10px;
 }
 
 .rezepte-item {
   width: 100px;
   border: 1px solid lightgray;
-  margin: 2px;
   padding: 10px;
   font-size: 0.7em;
+  border-radius: 10px;
+  box-shadow: 2px 2px 15px #888;
+  background-color: #eeeeee;
+  flex-shrink: 1;
+}
+
+.rezepte-item h2 {
+  font-size: 1.2em;
+  height: 3em;
+}
+
+.rezepte-item a:before {
+  content: '👉';
+}
+
+
+@media (max-width: 400px) {
+  .rezepte-container {
+    flex-direction: column;
+  }
+
+  .rezepte-item {
+    width: 95%;
+  }
 }
