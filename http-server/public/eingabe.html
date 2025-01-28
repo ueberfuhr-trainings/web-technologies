@@ -16,28 +16,19 @@
   </div>
   <div class="form-row">
     <label for="zutat1">Zutat 1</label>
-    <select name="zutat1">
-      <option>Tomaten (St.)</option>
-      <option>Wasser (ml)</option>
-      <option>Sellerie (g.)</option>
+    <select class="zutaten-auswahl" name="zutat1">
     </select>
     <input name="menge1" id="zutat1" type="number" min="1">
   </div>
   <div class="form-row">
     <label for="zutat2">Zutat 2</label>
-    <select>
-      <option>Tomaten (St.)</option>
-      <option>Wasser (ml)</option>
-      <option>Sellerie (g.)</option>
+    <select class="zutaten-auswahl">
     </select>
     <input id="zutat2" type="number" min="1">
   </div>
   <div class="form-row">
     <label for="zutat3">Zutat 3</label>
-    <select>
-      <option>Tomaten (St.)</option>
-      <option>Wasser (ml)</option>
-      <option>Sellerie (g.)</option>
+    <select class="zutaten-auswahl">
     </select>
     <input id="zutat3" type="number" min="1">
   </div>
@@ -55,6 +46,35 @@
   </div>
   <input class="form-row" type="submit">
 </form>
+
+<script>
+  let zutaten = [
+    {
+      name: 'Tomaten',
+      unit: 'St.'
+    },
+    {
+      name: 'Wasser',
+      unit: 'ml'
+    },
+    {
+      name: 'Sellerie',
+      unit: 'g.'
+    },
+    {
+      name: 'Hackfleisch',
+      unit: 'g.'
+    }
+  ];
+  document
+    .querySelectorAll('.zutaten-auswahl')
+    .forEach(combobox => {
+      combobox.innerHTML = zutaten
+        .map(zutat => `<option>${zutat.name} (${zutat.unit})</option>`)
+        .join()
+    });
+</script>
+<script src="script.js"></script>
 
 </body>
 </html>
