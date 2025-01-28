@@ -6,6 +6,10 @@ body {
   background-color: beige;
 }
 
+.form-row input {
+  border: none;
+}
+
 /* ID-Selector */
 #nameInput {
   background-color: aquamarine;
@@ -25,4 +29,22 @@ label {
 
 label::after {
   content: ':';
+}
+
+a:focus {
+  font-weight: bold;
+  background-color: aquamarine;
+}
+
+.rezepte-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.rezepte-item {
+  width: 100px;
+  border: 1px solid lightgray;
+  margin: 2px;
+  padding: 10px;
+  font-size: 0.7em;
 }
