@@ -36,24 +36,7 @@
 </form>
 
 <script>
-  let zutaten = [
-    {
-      name: 'Tomaten',
-      unit: 'St.'
-    },
-    {
-      name: 'Wasser',
-      unit: 'ml'
-    },
-    {
-      name: 'Sellerie',
-      unit: 'g.'
-    },
-    {
-      name: 'Hackfleisch',
-      unit: 'g.'
-    }
-  ];
+  let zutaten = [];
 
   function displayZutaten() {
     document
@@ -100,6 +83,15 @@
       addZutatenInput();
     });
   addZutatenInput();
+
+  fetch('zutaten.json')
+    .then(response => response.json())
+    .then(data => {
+      zutaten = data;
+      displayZutaten();
+    });
+
+
 </script>
 <script src="script.js"></script>
 
