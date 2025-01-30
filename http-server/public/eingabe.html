@@ -9,56 +9,169 @@
           integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
           crossorigin="anonymous"></script>
 </head>
-<body>
+<body data-bs-theme="dark">
 
-<h1>Rezept erstellen</h1>
+<nav class="navbar navbar-expand-lg navbar-default bg-primary">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <h1 class="navbar-brand">Rezept erstellen</h1>
+    </div>
+    <button class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Übersicht</a>
+          <a class="nav-link active" href="index.html">Rezept erstellen</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container">
+  <div class="row">
+    <form class="g-3 needs-validation"
+          novalidate>
+      <div class="mb-3 form-floating">
+        <input
+          id="nameInput"
+          class="form-control"
+          name="name"
+          type="text"
+          required
+          minlength="3"
+          aria-describedby="nameHelp">
+        <label
+          for="nameInput"
+          class="form-label">
+          Name
+        </label>
+        <div id="nameHelp" class="form-text">
+          Wähle eine geschmackvollen und aussagekräftigen Namen.
+        </div>
+        <div class="invalid-feedback">
+          Bitte gib einen Namen mit mindestens 3 Zeichen an.
+        </div>
+        <div class="valid-feedback">
+          Lecker! 😋
+        </div>
+      </div>
+      <div class="row form-group">
+        <label for="zutat1">Zutat #1</label>
+        <div class="input-group mb-3">
+          <select
+            class="form-select input-group-lg"
+            name="zutat1"
+            required
+          >
+            <option>Tomaten (St.)</option>
+            <option>Wasser (ml)</option>
+            <option>Sellerie (g.)</option>
+          </select>
+          <span class="input-group-text">Menge:</span>
+          <input
+            name="menge1"
+            class="form-control input-group-lg"
+            id="zutat1"
+            type="number"
+            required
+            value="1"
+            min="1">
+        </div>
+      </div>
+      <div class="row form-group">
+        <label for="zutat2">Zutat #2</label>
+        <div class="input-group mb-3">
+          <select
+            class="form-select input-group-lg"
+            name="zutat2"
+            required
+          >
+            <option>Tomaten (St.)</option>
+            <option>Wasser (ml)</option>
+            <option>Sellerie (g.)</option>
+          </select>
+          <span class="input-group-text">Menge:</span>
+          <input
+            name="menge2"
+            class="form-control input-group-lg"
+            id="zutat2"
+            type="number"
+            required
+            value="1"
+            min="1">
+        </div>
+      </div>
+      <div class="row form-group">
+        <label for="zutat3">Zutat #3</label>
+        <div class="input-group mb-3">
+          <select
+            class="form-select input-group-lg"
+            name="zutat3"
+            required
+          >
+            <option>Tomaten (St.)</option>
+            <option>Wasser (ml)</option>
+            <option>Sellerie (g.)</option>
+          </select>
+          <span class="input-group-text">Menge:</span>
+          <input
+            name="menge3"
+            class="form-control input-group-lg"
+            id="zutat3"
+            type="number"
+            required
+            value="1"
+            min="1">
+        </div>
+      </div>
 
-<form>
-  <div class="form-row mb-3">
-    <label for="nameInput" class="form-label">Name</label>
-    <input id="nameInput" class="form-control" name="name" type="text" required minlength="3">
+      <div class="mb-3">
+        <div class="form-floating">
+          <textarea class="form-control" id="zubereitung1"></textarea>
+          <label for="zubereitung1">Schritt 1</label>
+        </div>
+        <div class="form-floating">
+          <textarea class="form-control" id="zubereitung2"></textarea>
+          <label for="zubereitung2">Schritt 2</label>
+        </div>
+        <div class="form-floating">
+          <textarea class="form-control" id="zubereitung3"></textarea>
+          <label for="zubereitung3">Schritt 3</label>
+        </div>
+      </div>
+      <button class="btn btn-primary" type="submit">
+        Speichern
+      </button>
+    </form>
   </div>
-  <div class="form-row">
-    <label for="zutat1">Zutat 1</label>
-    <select name="zutat1">
-      <option>Tomaten (St.)</option>
-      <option>Wasser (ml)</option>
-      <option>Sellerie (g.)</option>
-    </select>
-    <input name="menge1" id="zutat1" type="number" min="1">
-  </div>
-  <div class="form-row">
-    <label for="zutat2">Zutat 2</label>
-    <select>
-      <option>Tomaten (St.)</option>
-      <option>Wasser (ml)</option>
-      <option>Sellerie (g.)</option>
-    </select>
-    <input id="zutat2" type="number" min="1">
-  </div>
-  <div class="form-row">
-    <label for="zutat3">Zutat 3</label>
-    <select>
-      <option>Tomaten (St.)</option>
-      <option>Wasser (ml)</option>
-      <option>Sellerie (g.)</option>
-    </select>
-    <input id="zutat3" type="number" min="1">
-  </div>
-  <div class="form-row">
-    <label for="zubereitung1">Schritt 1</label>
-    <textarea id="zubereitung1"></textarea>
-  </div>
-  <div class="form-row">
-    <label for="zubereitung2">Schritt 2</label>
-    <textarea id="zubereitung2"></textarea>
-  </div>
-  <div class="form-row">
-    <label for="zubereitung3">Schritt 3</label>
-    <textarea id="zubereitung3"></textarea>
-  </div>
-  <input class="form-row btn btn-primary" type="submit">
-</form>
+</div>
+
+<script>
+  // Example starter JavaScript for disabling form submissions if there are invalid fields
+  (() => {
+    'use strict'
+
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    const forms = document.querySelectorAll('.needs-validation')
+
+    // Loop over them and prevent submission
+    Array.from(forms).forEach(form => {
+      form.addEventListener('submit', event => {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+      }, false)
+    })
+  })()
+</script>
 
 </body>
 </html>
