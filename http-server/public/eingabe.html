@@ -35,64 +35,7 @@
   <input class="form-row" type="submit">
 </form>
 
-<script>
-  let zutaten = [];
-
-  function displayZutaten() {
-    document
-      .querySelectorAll('.zutaten-auswahl')
-      .forEach(combobox => {
-        combobox.innerHTML = zutaten
-          .map(zutat => `<option>${zutat.name} (${zutat.unit})</option>`)
-          .join()
-      });
-  }
-
-  displayZutaten();
-
-  document
-    .querySelector('#myButton')
-    .addEventListener('click', () => {
-      zutaten.push({
-        name: 'XYZ',
-        unit: 'KG.'
-      });
-      displayZutaten();
-    });
-
-  let zutatenCounter = 1;
-
-  function addZutatenInput() {
-    document
-      .querySelector('#zutatenInputs')
-      .insertAdjacentHTML('beforeend', `
-        <div class="form-row">
-            <label for="zutat${zutatenCounter}">Zutat #${zutatenCounter}</label>
-            <select class="zutaten-auswahl" name="zutat${zutatenCounter}">
-            </select>
-            <input name="menge1" id="zutat${zutatenCounter}" type="number" min="1">
-        </div>
-      `);
-    zutatenCounter++;
-    displayZutaten(); // TODO: nur die neue SELECT befüllen, nicht ALLE
-  }
-
-  document
-    .querySelector('#add-zutaten-link')
-    .addEventListener('click', () => {
-      addZutatenInput();
-    });
-  addZutatenInput();
-
-  fetch('zutaten.json')
-    .then(response => response.json())
-    .then(data => {
-      zutaten = data;
-      displayZutaten();
-    });
-
-
-</script>
+<script src="eingabe.js"></script>
 <script src="script.js"></script>
 
 </body>
